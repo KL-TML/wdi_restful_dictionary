@@ -22,5 +22,8 @@ class EntriesController < ApplicationController
     @entry = Entry.find_by(id: params[:id])
   end
 
+  def update
+    redirect_to entry_url(params[:id])
+  end
 
 end
