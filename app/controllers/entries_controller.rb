@@ -6,7 +6,21 @@ class EntriesController < ApplicationController
   end
 
   def show
-    render :index
+
   end
+
+  def new
+
+  end
+
+  def create
+    redirect_to entries_url
+  end
+
+  def edit
+    # render :edit
+    @entry = Entry.find_by(id: params[:id])
+  end
+
 
 end
